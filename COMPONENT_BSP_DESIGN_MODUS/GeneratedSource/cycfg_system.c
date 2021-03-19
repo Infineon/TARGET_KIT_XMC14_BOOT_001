@@ -4,13 +4,13 @@
 * Description:
 * System configuration
 * This file was automatically generated and should not be modified.
-* Tools Package 2.2.1.3335
-* xmclib 0.5.0.174
-* personalities 3.0.0.0
-* udd 3.0.0.788
+* Tools Package 2.3.0.3651
+* mtb-xmclib-cat3 3.0.0.276
+* personalities 5.0.0.0
+* udd 3.0.0.905
 *
 ********************************************************************************
-* Copyright 2020 Cypress Semiconductor Corporation
+* Copyright 2021 Cypress Semiconductor Corporation
 * SPDX-License-Identifier: Apache-2.0
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -31,12 +31,12 @@
 #define CLOCK_PCLK_SEL XMC_SCU_CLOCK_PCLKSRC_DOUBLE_MCLK
 #define CLOCK_DCO1_SYNC_ENABLED 1
 #define CLOCK_DCO1_SYNC_SEL XMC_SCU_CLOCK_SYNC_CLKSRC_OSCHP
-#define CLOCK_DCO1_SYNC_PRESCALER 1250
-#define CLOCK_DCO1_SYNC_PRELOAD 3000
+#define CLOCK_DCO1_SYNC_PRESCALER 1250U
+#define CLOCK_DCO1_SYNC_PRELOAD 3000U
 #define CLOCK_FDIV_SEL XMC_SCU_CLOCK_DCLKSRC_DCO1
-#define CLOCK_FDIV_I 1
-#define CLOCK_FDIV_F 0
-#define CLOCK_OSCHP_ENABLED 
+#define CLOCK_FDIV_I 1U
+#define CLOCK_FDIV_F 0U
+#define CLOCK_OSCHP_ENABLED 1U
 #define CLOCK_OSCHP_MODE XMC_SCU_CLOCK_OSCHP_MODE_OSC
 #define CLOCK_RTCCLK_SEL XMC_SCU_CLOCK_RTCCLKSRC_DCO2
 

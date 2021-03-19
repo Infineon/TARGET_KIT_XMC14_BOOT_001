@@ -91,7 +91,6 @@ $(document).ready(function(){initNavTree('index.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h2>Overview</h2>
-<p>This is Early Access Software for XMC devices in ModusToolbox. This software is made available for evaluation purposes only and is not recommended for production development. </p>
 <p>The XMC1400 Boot Kit (CPU-14A-V1) houses the XMC1400 Microcontroller and a 2x30 pin edge for application expansion.</p>
 <div class="image">
 <img src="board.png" alt="board.png"/>
@@ -122,12 +121,10 @@ $(document).ready(function(){initNavTree('index.html','');});
 <li>CUSTOM_DESIGN_MODUS - This component, disabled by default, causes the Configurator generated code from the application to be included. This assumes that the application provides configurator generated code. This should not be used at the same time as the BSP_DESIGN_MODUS component.</li>
 </ul>
 <p>Defines:</p><ul>
-<li>CYBSP_WIFI_CAPABLE - This define, disabled by default, causes the BSP to initialize the interface to an onboard wireless chip.</li>
+<li>CYBSP_WIFI_CAPABLE - This define, disabled by default, causes the BSP to initialize the interface to an onboard wireless chip if it has one.</li>
 <li>CY_USING_HAL - This define, enabled by default, specifies that the HAL is intended to be used by the application. This will cause the BSP to include the applicable header file and to initialize the system level drivers.</li>
 </ul>
-<h3>Clock Configuration</h3>
-<p>| Clock | Source | Output Frequency | |-------&mdash;|--------&mdash;|---------------&mdash;|</p>
-<h3>Power Configuration</h3>
+<p>See the <a href="md_bsp_settings.html">BSP Setttings</a> for additional board specific configuration settings.</p>
 <h2>API Reference Manual</h2>
 <p>The KIT_XMC14_BOOT_001 Board Support Package provides a set of APIs to configure, initialize and use the board resources.</p>
 <p>See the <a href="modules.html">BSP API Reference Manual</a> for the complete list of the provided interfaces.</p>
@@ -140,7 +137,7 @@ $(document).ready(function(){initNavTree('index.html','');});
 <li><a href="https://www.cypress.com/products/modustoolbox-software-environment">ModusToolbox</a></li>
 </ul>
 <hr/>
-<p> © Cypress Semiconductor Corporation, 2019-2020. </p>
+<p> © Cypress Semiconductor Corporation, 2019-2021. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part

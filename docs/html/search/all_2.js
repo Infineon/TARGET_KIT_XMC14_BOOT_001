@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['peripheral_20default_20bsp_20settings',['Peripheral Default BSP Settings',['../md_source_bsps_xmc_KIT_XMC14_BOOT_001_bsp_settings.html',1,'']]]
+  ['kit_5fxmc14_5fboot_5f001_20bsp',['KIT_XMC14_BOOT_001 BSP',['../index.html',1,'']]]
 ];

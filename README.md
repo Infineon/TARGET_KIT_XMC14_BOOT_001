@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is Early Access Software for XMC devices in ModusToolbox. This software is made available for evaluation purposes only and is not recommended for production development. <p>The XMC1400 Boot Kit (CPU-14A-V1) houses the XMC1400 Microcontroller and a 2x30 pin edge for application expansion.
+The XMC1400 Boot Kit (CPU-14A-V1) houses the XMC1400 Microcontroller and a 2x30 pin edge for application expansion.
 
 ![](docs/html/board.png)
 
@@ -31,21 +31,17 @@ To use code from the BSP, simply include a reference to `cybsp.h`.
 The BSP has a few hooks that allow its behavior to be configured. Some of these items are enabled by default while others must be explicitly enabled. Items enabled by default are specified in the KIT_XMC14_BOOT_001.mk file. The items that are enabled can be changed by creating a custom BSP or by editing the application makefile.
 
 Components:
-    * Device specific category reference (e.g.: CAT1) - This component, enabled by default, pulls in any device specific code for this board.
-    * BSP_DESIGN_MODUS - This component, enabled by default, causes the Configurator generated code for this specific BSP to be included. This should not be used at the same time as the CUSTOM_DESIGN_MODUS component.
-    * CUSTOM_DESIGN_MODUS - This component, disabled by default, causes the Configurator generated code from the application to be included. This assumes that the application provides configurator generated code. This should not be used at the same time as the BSP_DESIGN_MODUS component.
+* Device specific category reference (e.g.: CAT1) - This component, enabled by default, pulls in any device specific code for this board.
+* BSP_DESIGN_MODUS - This component, enabled by default, causes the Configurator generated code for this specific BSP to be included. This should not be used at the same time as the CUSTOM_DESIGN_MODUS component.
+* CUSTOM_DESIGN_MODUS - This component, disabled by default, causes the Configurator generated code from the application to be included. This assumes that the application provides configurator generated code. This should not be used at the same time as the BSP_DESIGN_MODUS component.
 
 Defines:
-    * CYBSP_WIFI_CAPABLE - This define, disabled by default, causes the BSP to initialize the interface to an onboard wireless chip.
-    * CY_USING_HAL - This define, enabled by default, specifies that the HAL is intended to be used by the application. This will cause the BSP to include the applicable header file and to initialize the system level drivers.
+* CYBSP_WIFI_CAPABLE - This define, disabled by default, causes the BSP to initialize the interface to an onboard wireless chip if it has one.
+* CY_USING_HAL - This define, enabled by default, specifies that the HAL is intended to be used by the application. This will cause the BSP to include the applicable header file and to initialize the system level drivers.
 
-### Clock Configuration
 
-| Clock    | Source    | Output Frequency |
-|----------|-----------|------------------|
 
-### Power Configuration
-
+See the [BSP Setttings][settings] for additional board specific configuration settings.
 
 ## API Reference Manual
 
@@ -61,6 +57,7 @@ See the [BSP API Reference Manual][api] for the complete list of the provided in
 * [ModusToolbox](https://www.cypress.com/products/modustoolbox-software-environment)
 
 [api]: https://cypresssemiconductorco.github.io/TARGET_KIT_XMC14_BOOT_001/html/modules.html
+[settings]: https://cypresssemiconductorco.github.io/TARGET_KIT_XMC14_BOOT_001/html/md_bsp_settings.html
 
 ---
-© Cypress Semiconductor Corporation, 2019-2020.
+© Cypress Semiconductor Corporation, 2019-2021.

@@ -6,7 +6,7 @@
 *
 ********************************************************************************
 * \copyright
-* Copyright 2020 Cypress Semiconductor Corporation
+* Copyright 2020-2021 Cypress Semiconductor Corporation
 * SPDX-License-Identifier: Apache-2.0
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -38,11 +38,12 @@ extern "C" {
 /**
  * \addtogroup group_bsp_functions Functions
  * \{
+ * Error codes specific to the board.
  */
 
 /**
  * \brief Initialize all hardware on the board
- * \returns CY_RSLT_SUCCESS if the board is sucessfully initialized, if there is
+ * \returns CY_RSLT_SUCCESS if the board is successfully initialized, if there is
  *          a problem initializing any hardware it returns an error code specific
  *          to the hardware module that had a problem.
  */
