@@ -3,11 +3,13 @@
 *
 * Description:
 * Provides initialization code for starting up the hardware contained on the
-* XMC board.
+* XMC™ board.
 *
 ********************************************************************************
 * \copyright
-* Copyright 2020-2021 Cypress Semiconductor Corporation
+* Copyright 2020-2022 Cypress Semiconductor Corporation (an Infineon company) or
+* an affiliate of Cypress Semiconductor Corporation
+*
 * SPDX-License-Identifier: Apache-2.0
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -36,9 +38,11 @@ cy_rslt_t cybsp_init(void)
 {
     cy_rslt_t result = CY_RSLT_SUCCESS;
 
-    #if defined(COMPONENT_BSP_DESIGN_MODUS) || defined(COMPONENT_CUSTOM_DESIGN_MODUS)
     init_cycfg_all();
-    #endif
+
+    #if defined(CYBSP_CUSTOM_SYSCLK_PM_CALLBACK)
+    result = cybsp_register_custom_sysclk_pm_callback();
+    #endif // No default syspm callback on this device
 
     return result;
 }

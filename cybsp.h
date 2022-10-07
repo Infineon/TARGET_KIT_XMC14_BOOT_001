@@ -2,11 +2,13 @@
 * \file cybsp.h
 *
 * \brief
-* Basic API for setting up boards containing a XMC MCU.
+* Basic API for setting up boards containing a XMC™ MCU.
 *
 ********************************************************************************
 * \copyright
-* Copyright 2020-2021 Cypress Semiconductor Corporation
+* Copyright 2020-2022 Cypress Semiconductor Corporation (an Infineon company) or
+* an affiliate of Cypress Semiconductor Corporation
+*
 * SPDX-License-Identifier: Apache-2.0
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,11 +27,9 @@
 #pragma once
 
 #include "cy_result.h"
+#include "cybsp_types.h"
 #include "xmc_gpio.h"
 #include "xmc_uart.h"
-#if defined(COMPONENT_BSP_DESIGN_MODUS) || defined(COMPONENT_CUSTOM_DESIGN_MODUS)
-#include "cycfg.h"
-#endif
 
 #if defined(__cplusplus)
 extern "C" {
@@ -48,6 +48,19 @@ extern "C" {
  *          to the hardware module that had a problem.
  */
 cy_rslt_t cybsp_init(void);
+
+#if defined(CYBSP_CUSTOM_SYSCLK_PM_CALLBACK)
+//--------------------------------------------------------------------------------------------------
+// cybsp_register_custom_sysclk_pm_callback
+//
+// Registers a power management callback that prepares the clock system for entering deep sleep mode
+// and restore the clocks upon wakeup from deep sleep. The application should implement this
+// function and define `CYBSP_CUSTOM_SYSCLK_PM_CALLBACK` if it needs to replace the default SysClk
+// DeepSleep callback behavior with application specific logic.
+// NOTE: This is called automatically as part of \ref cybsp_init
+//--------------------------------------------------------------------------------------------------
+cy_rslt_t cybsp_register_custom_sysclk_pm_callback(void);
+#endif // defined(CYBSP_CUSTOM_SYSCLK_PM_CALLBACK)
 
 /** \} group_bsp_functions */
 

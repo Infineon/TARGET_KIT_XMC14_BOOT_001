@@ -2,7 +2,10 @@
 
 ## Overview
 
-The XMC1400 Boot Kit (CPU-14A-V1) houses the XMC1400 Microcontroller and a 2x30 pin edge for application expansion.
+The XMC1400 Boot Kit (CPU-14A-V1) houses the XMC1400 Microcontroller and a 2x30 pin edge for application expansion.     
+**Note:**
+Programming this kit requires installing 
+[SEGGER J-Link software](https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack)
 
 ![](docs/html/board.png)
 
@@ -32,12 +35,11 @@ The BSP has a few hooks that allow its behavior to be configured. Some of these 
 
 Components:
 * Device specific category reference (e.g.: CAT1) - This component, enabled by default, pulls in any device specific code for this board.
-* BSP_DESIGN_MODUS - This component, enabled by default, causes the Configurator generated code for this specific BSP to be included. This should not be used at the same time as the CUSTOM_DESIGN_MODUS component.
-* CUSTOM_DESIGN_MODUS - This component, disabled by default, causes the Configurator generated code from the application to be included. This assumes that the application provides configurator generated code. This should not be used at the same time as the BSP_DESIGN_MODUS component.
 
 Defines:
 * CYBSP_WIFI_CAPABLE - This define, disabled by default, causes the BSP to initialize the interface to an onboard wireless chip if it has one.
 * CY_USING_HAL - This define, enabled by default, specifies that the HAL is intended to be used by the application. This will cause the BSP to include the applicable header file and to initialize the system level drivers.
+* CYBSP_CUSTOM_SYSCLK_PM_CALLBACK - This define, disabled by default, causes the BSP to skip registering its default SysClk Power Management callback, if any, and instead to invoke the application-defined function `cybsp_register_custom_sysclk_pm_callback` to register an application-specific callback.
 
 
 
@@ -53,11 +55,11 @@ See the [BSP API Reference Manual][api] for the complete list of the provided in
 * [KIT_XMC14_BOOT_001 BSP API Reference Manual][api]
 * [KIT_XMC14_BOOT_001 Documentation](https://www.infineon.com/cms/en/product/evaluation-boards/kit_xmc14_boot_001/)
 * [Cypress Semiconductor, an Infineon Technologies Company](http://www.cypress.com)
-* [Cypress Semiconductor GitHub](https://github.com/cypresssemiconductorco)
-* [ModusToolbox](https://www.cypress.com/products/modustoolbox-software-environment)
+* [Infineon GitHub](https://github.com/infineon)
+* [ModusToolbox™](https://www.cypress.com/products/modustoolbox-software-environment)
 
-[api]: https://cypresssemiconductorco.github.io/TARGET_KIT_XMC14_BOOT_001/html/modules.html
-[settings]: https://cypresssemiconductorco.github.io/TARGET_KIT_XMC14_BOOT_001/html/md_bsp_settings.html
+[api]: https://infineon.github.io/TARGET_KIT_XMC14_BOOT_001/html/modules.html
+[settings]: https://infineon.github.io/TARGET_KIT_XMC14_BOOT_001/html/md_bsp_settings.html
 
 ---
-© Cypress Semiconductor Corporation, 2019-2021.
+© Cypress Semiconductor Corporation (an Infineon company) or an affiliate of Cypress Semiconductor Corporation, 2019-2022.
