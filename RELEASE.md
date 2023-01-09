@@ -17,6 +17,8 @@ The KIT_XMC14_BOOT_001 library includes the following:
 * API documentation
 
 ### What Changed?
+#### v2.1.0
+* Add macro `CYBSP_USER_BTN_DRIVE` indicating the drive mode that should be used for user buttons
 #### v2.0.0
 Note: This revision is only compatible with ModusToolbox Tools 3.0 and newer.
 * Updated recipe-make, core-make, and XMClib to new major versions

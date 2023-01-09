@@ -30,6 +30,7 @@
 #include "cybsp_types.h"
 #include "xmc_gpio.h"
 #include "xmc_uart.h"
+#include "cybsp_hw_config.h"
 
 #if defined(__cplusplus)
 extern "C" {

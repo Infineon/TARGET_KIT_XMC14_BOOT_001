@@ -1,6 +1,6 @@
 {
     "core": {
-        "version": "2.0.0.29660"
+        "version": "2.1.0.30537"
     },
     "opt": {
         "props": {
@@ -9,6 +9,8 @@
                 "bsp_gen4",
                 "can",
                 "cat3",
+                "ccu4_capture",
+                "ccu8",
                 "comp",
                 "flash_200k",
                 "i2c",
@@ -16,6 +18,7 @@
                 "kit_xmc14_boot_001",
                 "led",
                 "mcu_gp",
+                "posif",
                 "rtc",
                 "spi",
                 "sram_16k",
