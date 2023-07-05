@@ -15,7 +15,7 @@ To use code from the BSP, simply include a reference to `cybsp.h`.
 
 ### Kit Features:
 
-* XMC1400 (ARM Cortex-M0 based) Microcontroller in a VQFN64 package
+* XMC1400 (ARM® Cortex®-M0 based) Microcontroller in a VQFN64 package
 * On board Debugger for downloading and debugging of application code
 * Virtual COM port for UART communication with terminal program e.g. Hyperterminal
 * 2x30 card edge connector for extension to application card e.g. Colour LED Card and White LED Card
