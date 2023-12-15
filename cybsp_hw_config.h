@@ -28,7 +28,6 @@
 
 #include "cy_result.h"
 #include "cybsp_types.h"
-#include "cycfg_pins.h"
 
 #if defined(__cplusplus)
 extern "C" {
