@@ -17,6 +17,12 @@ The KIT_XMC14_BOOT_001 library includes the following:
 * API documentation
 
 ### What Changed?
+#### v2.3.1
+* Updated the supported capabilities in props.json file for XMC&trade; MCU BSPs.
+* For KIT_XMC4400_DC_V1, enabled the USIC0_CH0 channel for UART and added CYBSP_USER_LED alias to P2[2].
+#### v2.3.0
+* Updated the supported capabilities in props.json file for XMC&trade; MCU BSPs.
+* Updated the version of BSP template for BSP Assistant tool.
 #### v2.2.1
 * Added memory-analyzer configuration support for KIT_XMC11_BOOT_001, KIT_XMC12_BOOT_001, KIT_XMC13_BOOT_001, KIT_XMC14_BOOT_001, KIT_XMC45_RELAX_V1, KIT_XMC_PLT2GO_XMC4200, and KIT_XMC_PLT2GO_XMC4400.
 #### v2.2.0
